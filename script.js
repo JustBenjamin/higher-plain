@@ -23,6 +23,13 @@ var shoppingCart = (function() {
         }
     }
 
+    // public methods
+
+    var obj = {};
+
+    //adding to cart 
+    
+
 
 })
 
