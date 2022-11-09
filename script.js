@@ -121,4 +121,18 @@ var shoppingCart = (function() {
     return obj;
 
 })();
+//*********************
+//events and triggers
+//*********************
+
+// adding item
+$('.add-to-cart').click(function(event){
+    event.preventDefault();
+    var name = $(this).data('name');
+    var price = Number($(this).data('price'));
+    shoppingCart.addItemToCart(name, price, 1);
+    displayCart();
+});
+
+//clear items
 
