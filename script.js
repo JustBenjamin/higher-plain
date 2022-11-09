@@ -83,5 +83,42 @@ var shoppingCart = (function() {
         saveCart();
     }
 
-})
+    //Count cart
+    obj.totalCount = function() {
+        var totalCount = 0;
+        for(var item in cart) {
+            totalCount += cart[item].count;
+        }
+        return totalCount;
+    }
+
+    // total cart
+    obj.totalCart = function() {
+        var totalCart = 0;
+        for(var item in cart) {
+            totalCart += cart[item].price * cart[item].count;
+        }
+        return Number(totalCart.toFixed(2));
+    }
+
+    // List cart
+    obj.listCart = function() {
+        var cartCopy = [];
+        for (i in cart) {
+            item = cart[i];
+            itemCopy = {};
+            for(p in item) {
+                itemCopy[p] = item[p];
+            }
+            itemCopy.total = Number(item.price * item.count).toFixed(2);
+            cartCopy.push(itemCopy)
+        }
+        return cartCopy;
+
+    }
+
+    // methods and functions
+    return obj;
+
+})();
 
