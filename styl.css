@@ -10,8 +10,8 @@ body {
   }
   
 
-  .active {
-    color:#5d18eb;
+.active {
+    background-color:#5d18eb !important;
   }
   /* Remove the jumbotron's default bottom margin */ 
    .jumbotron {
